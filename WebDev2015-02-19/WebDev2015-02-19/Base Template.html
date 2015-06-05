@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- You may or not not use jQuery; but, here just to show as example -->
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!-- you can choose another font-family, and even have as many as you design requires. -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <title>Base HTML 5 template</title>
+    <style>
+        * {
+            font-family: Raleway;
+        }
+    </style>
+    <script>
+        function test() {
+            alert("testing");
+
+        }
+        var person = {
+            age: 0,
+            birthday: function (incrementBy) {
+                if (!isNaN(parseInt(incrementBy))) {
+                    person.age += incrementBy;
+                }
+            }
+        }
+        $(function () {
+            person.age = 7;
+            person.birthday(4);
+
+            window.alert(person.age);
+            var answer = window.confirm("Do you know the age is " + person.age + "?");
+            console.log(answer);
+
+            alert("Borken pipe!");
+        });
+    </script>
+</head>
+<body onload="test()">
+    <div>
+        <table>
+            <tr>
+                <td id="person_age"></td>
+                <td id="person_name"></td>
+            </tr>
+        </table>
+    </div>
+    <h1>Your HTML content goes here</h1>
+    <input type="text" id="firstname" />
+    <input type="text" id="lastname" />
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Yu Zhou, E-Mail: joeyzhou@bu.edu" />
+
+    <title>Question 5</title>
+
+    <style>
+        input[placeholder^="help with"] {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        input[placeholder$="help with"] {
+            width: 200px;
+            height: 100px;
+        }
+
+        div cite span.odd {
+            font-family: italy;
+            font-size: 10px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        div cite span.even {
+            font-family: italy;
+            font-size: 10px;
+            font-weight: bolder;
+            color: green;
+        }
+
+        span + span.touch {
+            background-color: lightgreen;
+        }
+
+        span[lang*="en"] {
+            top: -50px;
+            position: relative;
+        }
+
+        canvas#render + span[lang*="en"] {
+            background-color: lightskyblue;
+            font-family: italy;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <!-- the first placeholder begins with help with -->
+    <input placeholder="help with chrome" />
+    <!-- the first placeholder ends with help with -->
+    <input placeholder="don't help with" />
+    <div>
+        <span>Span No.1(outside the cite of div) has original fomat</span>
+        <br />
+        <cite>
+            <!-- Span with the class odd and even in cite element in the div -->
+            <span class="odd">
+                Span No. 1(in the cite of div)
+            </span>
+            <span class="even">
+                Span No. 2(in the cite of div)
+            </span>
+            <span class="odd">
+                Span No. 3(in the cite of div)
+            </span>
+            <span class="even">
+                Span No. 4(in the cite of div)
+            </span>
+            <span class="odd">
+                Span No. 5(in the cite of div)
+            </span>
+            <span class="even">
+                Span No. 6(in the cite of div)
+            </span>
+        </cite>
+    </div>
+    <span>Span One Begins in black</span>
+    <span class="touch">Span Two with the class "touch" after span is called background color: light green</span>
+    <br />
+    <span lang="ben">This is span with property lang "ben" before Canvas No.1</span>
+    <canvas id="render" style="height: 100px;width: 100px;"></canvas>
+    <span lang="ben">This is span with property lang "ben" after Canvas No.1</span>
+</body>
+</html>

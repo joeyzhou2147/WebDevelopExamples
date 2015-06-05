@@ -1,0 +1,81 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yu Zhou, E-Mail: joeyzhou@bu.edu">
+    <meta name="keywords" content="MET CS601 'Boston University' 'Metropolitan College'">
+    <meta name="description" content="Homework #3, Chapter 12, Page 295, Question #1">
+
+    <title>Homework #3 Question #1</title>
+
+    <!-- Here just to show as example for js-->
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!-- you can choose another font-family, and even have as many as you design requires. -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <!-- Universal selector:  means all character data will take on the Raleway font-family look -->
+    <style>
+        * {
+            font-family: Raleway;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        var time = 0;
+        function slideBackChange(dvs1) {
+
+            var position = $(dvs1).position();
+            var lft = position.left;
+            if (time == 0) {
+                bigImage('#result', time);
+                time++;
+            } else if (time == 1) {
+                if ($(dvs1).is(":animated")) {
+                    $(dvs1).stop();
+                }
+                time++;
+            } else {
+                $(dvs1).attr("src", "catoon.jpg", "alt", "catoon", "class", "catoon", "id", "result02");
+                $(dvs1).animate({
+                    left: lft,
+                },
+                    500);
+                time++;
+            }
+        }
+
+        function normalImage(dvs, time) {
+            $(dvs).animate({
+                left: '10px',
+            },
+                5000,/* 5s */
+                function () {
+                    bigImage(dvs, time);
+                });
+        }
+
+        function bigImage(dvs, time) {
+            var imgWidth = document.getElementById("result").width;
+            var screenWidth = document.body.scrollWidth - imgWidth - 10;
+            $(dvs).animate({
+                left: screenWidth + 'px',
+            },
+                5000,
+                function () {
+                    normalImage(dvs, time);
+                });
+        }
+    </script>
+</head>
+<body>
+
+    <img id="result" src="iShopLite.gif" alt="iShopLite" style="width: 176px;height: 62px;background-color: blue;position: absolute;left: 10px" />
+    <button onclick="slideBackChange('#result')" style="position: absolute; left:10px; top: 75px;">Click</button>
+</body>
+</html>

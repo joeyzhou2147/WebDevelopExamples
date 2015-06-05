@@ -1,0 +1,80 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yu Zhou, E-Mail: joeyzhou@bu.edu">
+    <meta name="keywords" content="MET CS601 'Boston University' 'Metropolitan College'">
+    <meta name="description" content="Quiz #2">
+
+    <title>Check Input</title>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <script>
+
+        function isNotNull(str) {
+            var temp = "";
+            if (str != null || typeof (str) != 'undefined') {
+                for (var i = 0; i < str.length; i++) {
+                    temp = temp + str.charAt(i);
+                }
+                temp.replace(/\s*/, "");
+                temp = temp.replace(/\s*$/, "");
+                temp = temp.replace(/\s+/g, " ");//clean space
+                if (temp.length > 0)
+                    return true;
+                return false;
+            } else {
+                return false;
+            }
+        }
+
+        function clean() {
+            document.getElementById("result").innerHTML = "";
+        }
+        function isFloat(str) {
+            for (var i = 0; i < str.length; i++) {
+                if ((str.charAt(i) < "0" || str.charAt(i) > "9") && str.charAt(i) != '.') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkInput(div) {
+            var checkStr = "";
+            checkStr = checkStr + $(div)[0].value;// show
+            var result = "";
+            var resultStr = "";
+            var resultObj = document.getElementById("result");
+
+            if (isNotNull(checkStr)) {
+                result = result + "Your word is \"" + checkStr + "\".";
+            } else {
+                result = result + "It is null, Please type your words. ";
+            }
+            if (isFloat(checkStr)) {
+                result = result + "And It is floating-point literal.";
+            } else {
+                result = result + "And It is not floating-point literal.";
+            }
+
+            resultStr = "<font size='4' face='Arial' color='red'><b>" + result + "</b></font>";
+            resultObj.innerHTML = resultStr;
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center;"><a>Input you literal:(Retry can clean the result)</a></div>
+    <div style="text-align:center;"><input id="Ipt" type="text" /></div>
+    <div style="text-align: center;"><button id="check" onclick="checkInput('#Ipt')">Check it</button>&nbsp;&nbsp;<button onclick="clean()">Retry</button></div>
+    <div style="text-align: center;" id="result"></div>
+</body>
+</html>

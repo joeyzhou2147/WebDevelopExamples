@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Yu Zhou, E-Mail: joeyzhou@bu.edu" />
+
+    <title>Question 1</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                // Change the value of the button
+                //document.getElementById("btn").innerHTML = "Clicked";
+                var value01 = document.getElementById("v1").value;
+                var value02 = document.getElementById("v2").value;
+
+                //var v1 = $('#v1')[0].value; Another way to use value property
+
+                // Check if it is not a number
+                if (isNaN(value01) && isNaN(value02)) {
+                    console.log("The validation cannot proceed until you use valid integer values");
+                } else {
+
+                    // They are numbers
+                    var a = value01 - value02;
+                    if (a == 0) {
+                        // 1 equals 2
+                        console.log("The values are equal");
+                    } else {
+                        if (a > 0) {
+                            // 1 is greater than 2
+                            console.log("Value 1 is greater than Value 2");
+                        } else {
+                            // 2 is greater than 1
+                            console.log("Value 2 is greater than Value 1");
+                        }
+                    }
+                }
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Two input element and their placeholder were defined-->
+    <input alt="Value 1" id="v1" placeholder="Value 1" style="width: 80px;" type="text" />
+    <input alt="Value 2" id="v2" placeholder="Value 2" style="width: 80px;" type="text" />
+    <button id="btn">Run</button>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yu Zhou, E-Mail: joeyzhou@bu.edu">
+    <meta name="keywords" content="MET CS601 'Boston University' 'Metropolitan College'">
+    <meta name="description" content="Homework #3, Chapter 12, Page 295, Question #2">
+
+    <title>Homework #3 Question #2</title>
+
+    <!-- Here just to show as example for js-->
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!-- you can choose another font-family, and even have as many as you design requires. -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <!-- Universal selector:  means all character data will take on the Raleway font-family look -->
+
+    <style>
+        * {
+            font-family: Raleway;
+        }
+
+        body {
+            background-color: #c0c0c0;
+            margin: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        body > div {
+            margin: auto;
+            text-align: center;
+        }
+
+        [name=hide] {
+            display: none;
+        }
+
+        #alert span {
+            vertical-align: super;
+        }
+
+        div, p, h1 {
+            padding: 5%;
+            margin: auto;
+            text-align: center;
+        }
+
+        button {
+            font-size: 200%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+            ul li {
+                display: inline;
+                padding-right: 5px;
+            }
+
+        #interactive b {
+            font-weight: bold;
+            font-size: 130%;
+            color: darkgreen;
+        }
+        a {
+            border: 1px solid;
+            color: red;
+            font-family: italic;
+        }
+    </style>
+    
+    <script>
+    
+//    a {
+//        boder: 1px solid red
+//        italic: italic;
+//    }   
+    
+    </script>
+
+    <script>
+        $(function (event) {
+
+            $("#interactive").dialog({
+                buttons: { "Ok": function () { $(this).dialog("close"); } },
+                resizable: false,
+                autoOpen: false,
+                modal: true
+            });
+
+            $("div > button[title=default]").on("click", function (event) {
+                $("#default").dialog();
+            });
+
+            $("p > button[title=alert]").on("click", function (event) {
+                $("#alert").dialog({
+                    buttons: { "Ok": function () { $(this).dialog("close"); } },
+                    resizable: false,
+                    modal: true
+                });
+            });
+
+            $("button[title=interactive]").on("click", function (event) {
+                $("#interactive").dialog("open");
+            });
+
+            $("input[type=radio]").on("click", function (event) {
+                $("#interactive").dialog('option', 'title', "Your favorite: " + $(this).val());
+            });
+
+            $("button").button();
+        });
+
+    </script>
+    
+    <script>
+        function zan(id,obj){
+            var obj =$(obj);
+            var h=obj.attr("rel");
+            if(h==1){
+                alert("您已经赞过了");
+                return;
+            }
+            var j=obj.find("b");
+            j.text(parseInt(j)+1);
+            obj.attr("rel","1");
+            alert("赞成功！");
+        }
+    </script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+
+    <h1>HTML 5 - Using jQuery dialogs</h1>
+
+    <div id="alert" title="Alert Dialog" name="hide">
+        <img src="alert.gif" height="35" width="35">
+        <span>This is an alert message</span>
+    </div>
+    <p>
+        <button title="alert" type="button">Alert Dialog</button>
+    </p>
+    
+    <a>
+        赞zazazanzanajzanjzajznazajzanja
+        <b>232323232323</b>
+    </a>
+</body>
+</html>

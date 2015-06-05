@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Base Html 5 sample</title>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <link href="http://font.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
+
+    <style>
+        * {
+            font-family: Raleway;
+        }
+    </style>
+
+    <script>
+        $(function (event) {
+            $("button").button();
+
+            $("button").on("click", function (event) {
+                $("body").append("<div id='confirm' title='Attention Please' <center><img src='iShopLite.gif'><p>Are you sure you are male?</p></center></div>");
+
+                $("#confirm").dialog({
+                    autoOpen: false,
+                    modal: false,
+                    buttons: {
+                        "Yes,sure": function () {
+                            $(this).dialog("close");
+                        },
+                        "Just cancel": function () {
+                            alert("I know the answer.");
+                            $(this).dialog("close");
+                        },
+                    }
+                });
+
+                $("#confirm").dialog("Open");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Click the button and see what it show.
+    </p>
+    <button type="button">Go</button>
+</body>
+</html>

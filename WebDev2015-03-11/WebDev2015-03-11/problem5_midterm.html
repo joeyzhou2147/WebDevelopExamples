@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MET CS601 - Midterm Exam</title>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+            font-family: italy;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #pw {
+            width: 900px;
+        }
+    </style>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    
+
+    <script type="text/javascript" language="JavaScript">
+        // before loading, check if checkbox is check, change the type of input area.
+        function onload() {
+            var a = document.getElementById("altHide").checked;
+            var $box = document.getElementById("box");
+            if (a) {
+                show();
+            } else {
+                hide();
+            }
+        }
+
+        // once check the checkbox, will check if it is checked, and load different function
+        function check() {
+            var a = document.getElementById("altHide").checked;
+            var $box = document.getElementById("box");
+            if (a) {
+                show();
+            } else {
+                hide();
+            }
+        }
+
+        // get the object password and change the form 'box' innerhtml to change pw's type with the value typed in
+        function show() {
+            var $pw = document.getElementById("pw");
+            if ($pw.type == "password") {
+                document.getElementById("box").innerHTML = "<input  id=\"pw\" type=\"text\" name=\"password\" size=\"80\" style='width:\"900\";' value=" + $pw.value + ">";
+            }
+        }
+
+        // get the object password and change the form 'box' innerhtml to change pw's type with the value typed in
+        function hide() {
+            var $pw = document.getElementById("pw");
+            if ($pw.type == "text") {
+                document.getElementById("box").innerHTML = "<input  id=\"pw\" type=\"password\" name=\"password\" size=\"80\" style='width:\"900\";' value=" + $pw.value + ">";
+            }
+        }
+    </script>
+
+    <!--JavaScript question
+        Write the HTML, CSS and JavaScript that shows and hides what the user has typed in for a password. 
+        See the image below for an example
+    -->
+</head>
+    <body style="vertical-align: central; margin-left: auto; margin-right: auto;" onload="onload()">
+        <h1>Please enter a password:</h1>
+        <div id="div" align="center">
+            <form id="box">
+                <input id="pw" type="password" name="password">
+            </form>
+            <form>
+                <input id="altHide" type="checkbox" name="altHide" onclick="check()">
+                Click here to show the current value you have typed in.
+            </form>
+        </div>
+    </body>
+
+  
+</html>

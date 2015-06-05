@@ -1,0 +1,176 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>#5.1 SelectorSample</title>
+    <style type="text/css">
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        h1 {
+            font-weight: bolder;
+            text-space: 1inch;
+            word-spacing: 1in;
+        }
+
+        h5 {
+            font-weight: bold;
+        }
+
+        p {
+            font-family: Times New Roman;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <p>Part 5</p>
+    <br />
+
+    <br />
+    <h1>1. ID selector</h1>
+    <h5>Description:</h5>
+    <p>The #id selector styles the element with the specified id.</p>
+    <h5>Examples:</h5>
+    <p>Style the element with id="firstname":</p>
+    <p>#firstname { </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>2. Element selector</h1>
+    <h5>Description:</h5>
+    <p>The element selector selects all elements with the specified element name.</p>
+    <h5>Examples:</h5>
+    <p>Select and style all "h1" elements AND all "p" elements:</p>
+    <p>h1, p { </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>3. Class selector</h1>
+    <h5>Description:</h5>
+    <p>The .class selector styles all elements with the specified class.</p>
+    <h5>Examples:</h5>
+    <p>Select and style all elements with class="example":</p>
+    <p>.example { </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>4. Attribute selector</h1>
+    <h5>Description:</h5>
+    <p>The [attribute] selector is used to select elements with the specified attribute.</p>
+    <h5>Examples:</h5>
+    <p>Style all "a" elements with a target attribute:</p>
+    <p>a[target] { </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>5. Adjacet selector</h1>
+    <h5>Description:</h5>
+    <p>The [attribute] selector is used to select elements with the specified attribute.</p>
+    <h5>Examples:</h5>
+    <p>Another use case might be styling of "caption span"s of the following "img" elements:</p>
+    <p>img + span.caption {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   font-style: italic;</p>
+    <p>}</p>
+    <p>img src="photo1.jpg" span class="caption" The first photo</p>
+    <br />
+
+    <br />
+    <h1>6. Direct-descendent selector</h1>
+    <h5>Description:</h5>
+    <p>The element element(Direct-descendent) selector is used to select elements inside elements.</p>
+    <h5>Examples:</h5>
+    <p>Select and style every "p" element that is inside "div" elements:</p>
+    <p>div p {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>7. Grouped selectors</h1>
+    <h5>Description:</h5>
+    <p>
+        By combining the grouping of selectors that share the same declaration and declarations that share the same selector you can apply multiple declarations to multiple selectors.
+        This technique allows you to create compact yet powerful CSS rules.
+    </p>
+    <h5>Examples:</h5>
+    <p>combines Group Selectors with Group Declarations into one powerful technique:</p>
+    <p>body, th, td {font-size: 12px; font-family: arial, helvetica, sans-serif;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>8. Descendent selector</h1>
+    <h5>Description:</h5>
+    <p>
+        A descendant selector is made up of two or more selectors separated by white space.
+        A descendant selector of the form "A B" matches when an element B is an arbitrary descendant of some ancestor element A.
+    </p>
+    <h5>Examples:</h5>
+    <p>Set a background color for all "ul" elements that are preceded by a "p" element with the same parent:</p>
+    <p>p ~ ul {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>9. Universal selector</h1>
+    <h5>Description:</h5>
+    <p>
+        The * selector selects all elements.
+        The * selector can also select all elements inside another element (See "More Examples").
+    </p>
+    <h5>Examples:</h5>
+    <p>Select all elements, and set their background color to yellow:</p>
+    <p>* { </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;   background-color: yellow;</p>
+    <p>}</p>
+    <br />
+
+    <br />
+    <h1>10. Pseudo classes</h1>
+    <h5>Description:</h5>
+    <p>1. The :first-child pseudo-class matches an element that is the first child element of some other element.</p>
+    <p>2. The link pseudo-classes: :link and :visited</p>
+    <p>3. The dynamic pseudo-classes: :hover, :active, and :focus</p>
+    <p>4. The language pseudo-class: :lang</p>
+    <h5>Examples:</h5>
+    <p>a:link    { color: red }    /* unvisited links */</p>
+    <p>a:visited { color: blue }   /* visited links   */</p>
+    <p>a:hover   { color: yellow } /* user hovers     */</p>
+    <p>a:active  { color: lime }   /* active links    */</p>
+    <br />
+
+    <br />
+    <h1>11. Pseudo elements</h1>
+    <h5>Description:</h5>
+    <p>Pseudo-elements behave just like real elements in CSS with the exceptions described below and elsewhere.</p>
+    <p>1. The :first-line pseudo-element applies special styles to the contents of the first formatted line of a paragraph.</p>
+    <p>2. The :first-letter pseudo-element must select the first letter of the first line of a block, if it is not preceded by any other content (such as images or inline tables) on its line.</p>
+    <p>3. The ':before' and ':after' pseudo-elements can be used to insert generated content before or after an element's content.</p>
+    <h5>Examples:</h5>
+    <p>P              { font-size: 12pt; line-height: 1.2 }</p>
+    <p>P:first-letter { font-size: 200%; font-style: italic;font-weight: bold; float: left }</p>
+    <p>SPAN           { text-transform: uppercase }</p>
+    <br />
+
+    <br />
+    <h1>Part 5 End</h1>
+    <br />
+
+
+</body>
+</html>

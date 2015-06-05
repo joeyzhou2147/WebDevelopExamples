@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html>
+ <head>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>jQuery dialog examples</title>	 
+	 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	 <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	 	 
+	 <link href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+	 <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+     
+     <style>
+       * {
+           font-family: Raleway;	
+       }
+	   body {
+	   	   background-color: #c0c0c0;
+		   margin: 0;
+	   }
+	   img {
+	   	   border: 0;
+	   }
+	   body > div {
+		   margin: auto;
+		   text-align: center;
+	   }
+	   [name=hide] {
+	   	   display:none;
+	   }
+	   #alert span {
+		   vertical-align: super;
+	   }
+	   div, p, h1 {
+		   padding: 5%;
+		   margin: auto;
+		   text-align: center;
+	   }
+	   button {
+	   	   font-size: 200%;
+	   }
+	   ul {
+		   list-style-type: none;
+		   padding: 0;
+		   text-align: center;
+	   }
+	   ul li {
+	   	   display: inline;
+		   padding-right: 5px;
+	   }
+	   #interactive  b {
+		   font-weight: bold;
+		   font-size: 130%;
+		   color: darkgreen;
+	   }
+	 </style>
+	 
+	 <script>
+	   $(function(event) {
+		   
+		   $("#interactive").dialog({
+			   buttons: { "Ok": function () { $(this).dialog("close"); } },
+               resizable: false,
+			   autoOpen: false,
+               modal: true
+           }); 
+		   
+	   	   $("div > button[title=default]").on("click", function(event) {
+			   $("#default").dialog();
+	   	   });
+		   
+	   	   $("p > button[title=alert]").on("click", function(event) {
+			   $("#alert").dialog({
+				   buttons: { "Ok": function () { $(this).dialog("close"); } },
+                   resizable: false,
+                   modal: true
+               }); 
+	   	   });
+		   
+		   $("button[title=interactive]").on("click", function(event) {
+			   $("#interactive").dialog("open");
+		   });
+		   
+		   $("input[type=radio]").on("click", function(event) {
+		   	    $("#interactive").dialog('option', 'title', "Your favorite: " + $(this).val());
+		   });
+		   
+		   $("button").button();
+	   });
+
+	 </script>
+	 
+ </head>
+
+<body>
+	<h1>HTML 5 - Using jQuery dialogs</h1>
+    
+    <?php
+        echo '<p>Hello World</p>'; 
+    ?>
+
+    <div id="default" title="Default Dialog" name="hide">
+		This is a default message.
+	</div>
+	
+	<div id="alert" title="Alert Dialog" name="hide">
+		<img src="alert.gif" height="35" width="35">
+		<span>This is an alert message</span>
+	</div>
+	
+	<div id="interactive" title="Interactive" name="hide">
+		<div><b>What is your favorite color?</b></div>
+		<ul>
+			<li><label><input type="radio" name="color" value="red">Red</label></li>
+			<li><label><input type="radio" name="color" value="blue">Blue</label></li>
+			<li><label><input type="radio" name="color" value="green">Green</label></li>
+		</ul>
+	</div>
+	
+    <div>
+       <button type="button" title="default">Default Dialog</button>
+	</div>
+	<p>
+	   <button title="alert" type="button">Alert Dialog</button>
+	</p>
+	<div>
+		<button title="interactive" type="button">Interactive Dialog</button>
+	</div>
+</body>
+</html>

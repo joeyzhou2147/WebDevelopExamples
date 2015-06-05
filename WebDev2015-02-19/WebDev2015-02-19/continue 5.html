@@ -1,0 +1,58 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- You may or not not use jQuery; but, here just to show as example -->
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!-- you can choose another font-family, and even have as many as you design requires. -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <title>Base Authentication</title>
+    <style>
+        * {
+            font-family: Raleway;
+        }
+    </style>
+    <script>
+        for (i = 0; i < 10; i++) {
+            if (i == 5) {
+                console.log("number is 5 now");
+            } else {
+                console.log("number i is" + i);
+            }
+        };
+
+        $(function () {
+            $("#firstname").on("change", function() {
+                switch (parseInt(this.value)) {
+                case 0:
+                    alert("it is 0");
+                    break;
+                default:
+                    alert("nothing right here");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td id="person_age"></td>
+                <td id="person_name"></td>
+                <td id="div1"></td>
+            </tr>
+        </table>
+    </div>
+    <h1>Authentication: Start here</h1>
+    <input type="text" id="firstname" />
+    <input type="text" id="lastname" />
+</body>
+</html>

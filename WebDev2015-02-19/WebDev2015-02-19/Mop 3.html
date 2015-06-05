@@ -1,0 +1,44 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- You may or not not use jQuery; but, here just to show as example -->
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <!-- you can choose another font-family, and even have as many as you design requires. -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <title>Base Mop</title>
+    <style>
+        * {
+            font-family: Raleway;
+        }
+    </style>
+    <script>
+        function Mop() {
+            
+        }
+        Mop.prototype.isReadyToRinse = function() {
+            console.log('Not ready to rinse!');
+            return " this mop ";
+        }
+        Mop.prototype.type = 5;
+        Mop.prototype.type = "Not Known";
+
+        var myMop = new Mop();
+
+        alert("My mop is " + myMop.isReadyToRinse());
+
+        var joesMop = myMop;
+        alert(joesMop != myMop);
+    </script>
+</head>
+<body>
+    <h1>This is a stub</h1>
+</body>
+</html>
