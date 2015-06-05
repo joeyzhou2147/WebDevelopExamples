@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Question 10 Html</title>
+    <style>
+
+        body {
+            font-size: 30px;
+            font-family: arial,sans-serif !important;
+        }
+
+        li {
+            color: lightcoral;
+        }
+    </style>
+</head>
+    <body>
+        <p>Question 10:</p>
+        <p>a: Only using one query statement, query the table for all users with empty (null) password or a password that has a length less than three characters.
+            
+            </p>
+        <p>b: Update any user's email address to be "andrew@bu.edu" when it was entered as asheehan@bu.edu.</p>
+        <p>c: Delete a user with the id of 12.</p>
+
+        <ul>
+            <li>ANSWER:</li>
+            <li>a:[<span>select * from CART where password is null and len(password) < 3</span>]</li>
+            <li>b:[<span>update CART set email = "andrew@bu.edu" where email = "asheehan@bu.edu"</span>]</li>
+            <li>c:[<span>delete from CART where user_id = 12</span>]</li>
+        </ul>
+        
+    </body>
+</html>

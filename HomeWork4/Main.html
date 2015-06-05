@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <style>
+        .body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            margin-bottom: auto;
+        }
+
+        .emptyDiv {
+            width: auto;
+            height: 50px;
+            text-align: center;
+        }
+
+        .borderRight {
+            border-right-style: solid;
+            border-right-color: black;
+        }
+
+        .leftTable {
+            font-weight: bolder;
+            font-size: 44px;
+            font-family: Times New Roman;
+            text-align: right;
+            color: green;
+            font-style: italic;
+            width: 300px;
+            height: auto;
+            position: absolute;
+        }
+
+        .leftTableBody {
+            width: 280px;
+        }
+
+        .leftTableTd {
+            height: 100px;
+        }
+
+        .rightTable {
+            position: relative;
+            width: 830px;
+            height: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .img72 {
+            width: 72px;
+            height: 72px;
+        }
+
+        .opacity50 {
+            -moz-opacity: 0.6;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .fontBlue {
+            color: darkblue;
+            font-size: 54px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .fontDarkRed54 {
+            color: darkred;
+            font-size: 54px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .fontBolder {
+            font-weight: 800;
+        }
+
+        .fontBold {
+            font-weight: 500;
+        }
+
+        .fontBlack25 {
+            font-size: 25px;
+            color: black;
+            text-align: center;
+        }
+
+        .fontGray {
+            color: gray;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .fontBlack {
+            font-size: 30px;
+            font-weight: bolder;
+            color: black;
+            text-align: center;
+        }
+
+        .ffTimeNewRoman {
+            font-family: Times New Roman;
+        }
+
+        .ffGeorgia {
+            font-family: Georgia;
+        }
+
+        .ffLucidaGrande {
+            font-family: Lucida Grande;
+        }
+
+        .ffVerdana {
+            font-family: Verdana;
+        }
+
+        .ffRaleway {
+            font-family: raleway;
+        }
+
+        .ffAsap {
+            font-family: Asap;
+        }
+
+        .Helvetica {
+            font-family: Helvetica;
+        }
+
+        .ffArial {
+            font-family: Arial;
+        }
+
+        .noUnderLine {
+            text-decoration: none;
+        }
+
+        img[src="images/checkmark50x44.png"] {
+            display: none;
+        }
+
+        #CMAboutU {
+            display: none;
+        }
+
+        #CMAddress {
+            display: none;
+        }
+
+        #CMContact {
+            display: none;
+        }
+
+        #CMReview {
+            display: none;
+        }
+
+        input {
+            width: 500px;
+            height: 34px;
+            font-size: 32px;
+        }
+        select {
+            width: 100px;
+            height: 34px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body onload="onload()">
+    <div id="Initial" class="body">
+        <div class="leftTable borderRight">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">Welcome to Registration.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontBlack">
+                        Follow the question, Navidate with these controls:
+                        The controls below are only for demonstration use;you don't have to click on them...
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack opacity50">
+                    <td class="opacity50">
+                        <br />
+                        <img class="img72" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img class="img72" src="images/right48x48.png" />
+                        <br />
+                        <span>Back</span>&nbsp;
+                        <span>Cancel</span>&nbsp;
+                        <span>Next</span>
+                        <br />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <a onclick="navigate('Initial','About')" class="noUnderLine">
+                            <img class="img72 pointer" id="LetBegin" src="images/right48x48.png" />
+                            <br />
+                            <span>Let's Begin!</span>
+                        </a>
+                    </td>
+                </tr>
+            </table><div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="About" class="body">
+        <div class="leftTable borderRight">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <div id="nameSpinning" class="emptyDiv"></div>
+            <table>
+                <tr>
+                    <td id="docNameTell" class="ffLucidaGrande fontBlue">Tell us you full name.</td>
+                    <td id="docNameExist" class="ffLucidaGrande fontDarkRed54">A similar user exists, someone has that name, you need to try another name.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        Other Sites want your Date of Birth or your dog's name, but we don't care.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input id="typeName" type="text" />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('About', 'Initial')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="checkName()" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Address" class="body">
+        <div class="leftTable borderRight">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <table>
+                <tr id="addressTableHead">
+                    <td id="docAddrTell" class="ffLucidaGrande fontBlue">What state do you currently reside in?</td>
+                    <td id="docAddrNone" class="ffLucidaGrande fontDarkRed54">You need to pick a state.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        This just gives us something to ask you in case we need to figure something out.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <select id="typeAddress"></select>
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Address', 'About')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="checkAddress()" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Contact" class="body">
+        <div class="leftTable borderRight">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <div id="emailSpinning" style="text-align: center"></div>
+            <table>
+                <tr>
+                    <td id="docEmailTell" class="ffLucidaGrande fontBlue">We need an email address to send you material on you new account.</td>
+                    <td id="docEmailExist" class="ffLucidaGrande fontDarkRed54">Someone has that email address in our system.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        This is important. Your email address tells us where to communicate with you.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input id="typeEmail" type="text" />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Contact', 'Address')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="checkContact()" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Review" class="body">
+        <div class="leftTable borderRight">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <div class="emptyDiv"></div>
+            <div id="checkSpinning" style="text-align: center"></div>
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">This is what we have on you. Please check it over.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                    </td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your name: </span><span id="getName" class="fontBold">joe</span></td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your location: </span><span id="getLocation" class="fontBold">joeHome</span></td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your email: </span><span id="getEmail" class="fontBold">joe@mail</span></td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Review', 'Contact')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img onclick="checkFinal('false')" class="img72 pointer" src="images/abort48x48.png" />&nbsp;
+                        <img onclick="checkFinal('true')" class="img72 pointer" src="images/checkmark.png" />
+                    </td>
+                </tr>
+            </table><div id="reviewFootDiv" class="emptyDiv ffGeorgia fontBlack25">
+
+            </div>
+        </div>
+    </div>
+    <?php
+
+    ?>
+
+    <script type="text/javascript">
+
+        var xmlHttp;
+        try {
+            // Firefox, Opera 8.0+, Safari
+            xmlHttp = new XMLHttpRequest();
+        }
+        catch (e) {
+            // Internet Explorer
+            try {
+                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        function onload() {
+            $("#Initial").show();
+            $("#About").hide();
+            $("#Address").hide();
+            $("#Contact").hide();
+            $("#Review").hide();
+
+            $("#docNameExist").hide();
+            $("#docAddrNone").hide();
+            $("#docEmailExist").hide();
+
+        }
+        function navigate(prev, next) {
+            var sPrev = '#' + prev;
+            var sNext = '#' + next;
+            console.log(sPrev);
+            console.log(sNext);
+
+            $(sPrev).hide();
+            $(sNext).show();
+        }
+
+        function getStates() {
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    $("#typeAddress")[0].innerHTML = xmlHttp.responseText;
+                }
+            }
+            xmlHttp.open("GET", "getStates.php", true);
+            xmlHttp.send(null);
+        }
+
+        function checkName() {
+            var spinningDiv = $("#nameSpinning")[0];
+            var nameInput = $("#typeName")[0];
+            var nameValue = nameInput.value;
+            spinningDiv.innerHTML = "<img src='images/spinning-wheel.gif'/>";
+            if (nameValue != "") {
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        if (xmlHttp.responseText.substring(xmlHttp.responseText.length - 7) == "success") {
+                            getStates();
+                            spinningDiv.innerHTML = "";
+                            navigate('About', 'Address'); /// changing the view here, and getStates before it.
+                        } else {
+                            //alert("A similar user exists, someone has that name, you need to try another name.");
+                            navigate("docNameTell", "docNameExist");
+                            window.setTimeout(function () {
+                                navigate("docNameExist", "docNameTell");
+                                spinningDiv.innerHTML = "";
+                            }, 3000);
+                        }
+                    }
+                }
+                xmlHttp.open("GET", "user.php?name=" + nameValue, true);
+                xmlHttp.send(null);
+
+            } else {
+                alert("Sorry, You can't go next without telling us your name.");
+            }
+
+        }
+
+        function checkAddress() {
+
+            var addressHead = $("#addressTableHead")[0];
+            var addressSelect = $("#typeAddress")[0];
+            var addressValue = addressSelect.value;
+            if (addressValue != "") {
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        navigate('Address', 'Contact');
+                    }
+                }
+                xmlHttp.open("GET", "user.php?address=" + addressValue, true);
+                xmlHttp.send(null);
+            } else {
+                alert("Sorry, You can't go next without telling us your address.");
+                addressHead.innerHTML = "<td class='ffLucidaGrande fontDarkRed54'>You need to pick a state.</td>";
+            }
+        }
+
+        function checkContact() {
+            var spinningDiv = $("#emailSpinning")[0];
+            spinningDiv.innerHTML = "<img src='images/spinning-wheel.gif'/>";
+
+            var emailInput = $("#typeEmail")[0];
+            var emailValue = emailInput.value;
+
+            // change the value of review page here.
+            var getName = $("#getName")[0];
+            var getLocation = $("#getLocation")[0];
+            var getEmail = $("#getEmail")[0];
+            getName.innerHTML = $("#typeName")[0].value;
+            getLocation.innerHTML = $("#typeAddress")[0].value;
+            getEmail.innerHTML = $("#typeEmail")[0].value;
+
+            if (emailValue != "") {
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        if (xmlHttp.responseText.substring(xmlHttp.responseText.length - 7) == "success") {
+                            navigate('Contact', 'Review'); /// changing the view here.
+                            spinningDiv.innerHTML = "";
+                        } else {
+                            //alert("A similar email exists, someone has that email, you need to try another email.");
+                            navigate("docEmailTell", "docEmailExist");
+                            window.setTimeout(function () {
+                                navigate("docEmailExist", "docEmailTell");
+                                spinningDiv.innerHTML = "";
+                            }, 3000);
+                        }
+                    }
+                }
+                xmlHttp.open("GET", "user.php?email=" + emailValue, true);
+                xmlHttp.send(null);
+            } else {
+                alert("Sorry, You can't go next without telling us your email.");
+            }
+        }
+
+        function checkFinal(check) {
+            var spinningDiv = $("#checkSpinning")[0];
+            spinningDiv.innerHTML = "<img src='images/spinning-wheel.gif'/>";
+
+            var checkValue = check;
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.responseText.substring(7,14) == "success") {
+                        $("#reviewFootDiv")[0].innerHTML = "Action success. Sql data is updated.";
+                    } else {
+                        $("#reviewFootDiv")[0].innerHTML = "Action failure. Sql data is not updated.";
+                    }
+                    window.setTimeout(function () {
+                        $("#reviewFootDiv")[0].innerHTML = "";
+                        spinningDiv.innerHTML = "";
+                    }, 3000);
+                }
+            }
+            xmlHttp.open("GET", "user.php?check=" + checkValue, true);
+            xmlHttp.send(null);
+        }
+
+    </script>
+</body>
+</html>

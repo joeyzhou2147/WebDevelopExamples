@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        body {
+            font-size: 12px;
+            font-family: Raleway;
+        }
+         .body {
+             width: 1200px;
+             margin-left: auto;
+             margin-right: auto;
+             height: 1200px;
+             margin-bottom: auto;
+         }
+
+
+        .border {
+            border-color: lightsteelblue;
+            border-style: solid;
+        }
+
+        .leftTable {
+            color: black;
+            width: 350px;
+            height: 1150px;
+            position: absolute;
+        }
+
+        .rightTable {
+            position: relative;
+            border-color: black;
+            width: 800px;
+            height: 1150px;
+            margin-left: auto;
+        }
+
+        .rightTableHeader {
+            position: relative;
+            width: 800px;
+            height: 200px;
+            margin-left: auto;
+        }
+        .rightTableContent {
+            position: relative;
+            width: 800px;
+            height: 770px;
+            margin-left: auto;
+        }
+        .rightTableFooter {
+            position: relative;
+            width: 800px;
+            height: 150px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+    <body>
+        <div id="body" alt="wrapper" class="body border">
+            wrapper
+            <div id="leftcol" alt="leftcol" class="leftTable border">leftcolumn</div>
+            <div id="rightcol" alt="rightcol" class="rightTable border">
+                rightcolumn
+                <div id="header" alt="header" class="rightTableHeader border">header</div>
+                <div id="content" alt="content" class="rightTableContent border">content</div>
+                <div id="footer" alt="footer" class="rightTableFooter border">footer</div>
+            </div>
+        </div>
+    </body>
+</html>

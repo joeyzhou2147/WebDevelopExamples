@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 5 Html</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <input type="text" value="" id="city" placeholder="Please type city here. eg. Boston...">
+    <button class="btn">Click to get Weather</button>
+    <p class="weather"></p>
+    <script>
+        $(function () {
+            $(".btn").on('click', function () {
+                var city = $('#city').val();
+                if (city.length > 0) {
+                    $.getJSON("Question05.php?city=" + city, function (json) {
+                        $('.weather').text(json.weather + " " + json.temp);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

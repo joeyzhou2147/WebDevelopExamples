@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <style>
+        .body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            margin-bottom: auto;
+        }
+
+        .emptyDiv {
+            width: auto;
+            height: 50px;
+        }
+
+        .borderRigtht {
+            border-right-style: solid;
+            border-right-color: black;
+        }
+
+        .leftTable {
+            font-weight: bolder;
+            font-size: 44px;
+            font-family: Times New Roman;
+            text-align: right;
+            color: green;
+            font-style: italic;
+            width: 300px;
+            height: auto;
+            position: absolute;
+        }
+
+        .leftTableBody {
+            width: 280px;
+        }
+
+        .leftTableTd {
+            height: 100px;
+        }
+
+        .rightTable {
+            position: relative;
+            width: 830px;
+            height: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .img72 {
+            width: 72px;
+            height: 72px;
+        }
+
+        .opacity50 {
+            -moz-opacity: 0.6;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .fontBlue {
+            color: darkblue;
+            font-size: 54px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .fontBolder {
+            font-weight: 800;
+        }
+
+        .fontBold {
+            font-weight: 500;
+        }
+
+        .fontBlack25 {
+            font-size: 25px;
+            color: black;
+            text-align: center;
+        }
+
+        .fontGray {
+            color: gray;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .fontBlack {
+            font-size: 30px;
+            font-weight: bolder;
+            color: black;
+            text-align: center;
+        }
+
+        .ffTimeNewRoman {
+            font-family: Times New Roman;
+        }
+
+        .ffGeorgia {
+            font-family: Georgia;
+        }
+
+        .ffLucidaGrande {
+            font-family: Lucida Grande;
+        }
+
+        .ffVerdana {
+            font-family: Verdana;
+        }
+
+        .ffRaleway {
+            font-family: raleway;
+        }
+
+        .ffAsap {
+            font-family: Asap;
+        }
+
+        .Helvetica {
+            font-family: Helvetica;
+        }
+
+        .ffArial {
+            font-family: Arial;
+        }
+
+        .noUnderLine {
+            text-decoration: none;
+        }
+
+        img[src="images/checkmark50x44.png"] {
+            display: none;
+        }
+
+        #CMAboutU {
+            display: none;
+        }
+
+        #CMAddress {
+            display: none;
+        }
+
+        #CMContact {
+            display: none;
+        }
+
+        #CMReview {
+            display: none;
+        }
+
+        input {
+            width: 500px;
+            height: 34px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body onload="onload()">
+    <div id="Initial" class="body">
+        <div class="leftTable borderRigtht">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">Welcome to Registration.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontBlack">
+                        Follow the question, Navidate with these controls:
+                        The controls below are only for demonstration use;you don't have to click on them...
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack opacity50">
+                    <td class="opacity50">
+                        <br />
+                        <img class="img72" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img class="img72" src="images/right48x48.png" />
+                        <br />
+                        <span>Back</span>&nbsp;
+                        <span>Cancel</span>&nbsp;
+                        <span>Next</span>
+                        <br />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <a onclick="navigate('Initial','About')" class="noUnderLine">
+                            <img class="img72 pointer" id="LetBegin" src="images/right48x48.png" />
+                            <br />
+                            <span>Let's Begin!</span>
+                        </a>
+                    </td>
+                </tr>
+            </table><div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="About" class="body">
+        <div class="leftTable borderRigtht">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <div class="emptyDiv"></div>
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">Tell us you full name.</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        Other Sites want your Date of Birth or your dog's name, but we don't care.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('About', 'Initial')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="navigate('About','Address')" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Address" class="body">
+        <div class="leftTable borderRigtht">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">What state do you currently reside in?</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        This just gives us something to ask you in case we need to figure something out.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Address', 'About')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="navigate('Address', 'Contact')" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Contact" class="body">
+        <div class="leftTable borderRigtht">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">"We need an email address to send you material on you new account</td>
+                </tr>
+                <tr>
+                    <td class="ffLucidaGrande fontGray">
+                        This is important. Your email address tells us where to communicate with you.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Contact', 'Address')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/cancel48x48.png" />&nbsp;
+                        <img onclick="navigate('Contact', 'Review')" class="img72 pointer" src="images/right48x48.png" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Review" class="body">
+        <div class="leftTable borderRigtht">
+            <table class="leftTableBody">
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAboutU" src="images/checkmark50x44.png" />About You&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMAddress" src="images/checkmark50x44.png" />Address&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img style="display:inline;" id="CMContact" src="images/checkmark50x44.png" />Contact&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="leftTableTd">
+                        <img id="CMReview" src="images/checkmark50x44.png" />Review&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightTable">
+            <div class="emptyDiv"></div>
+            <table>
+                <tr>
+                    <td class="ffLucidaGrande fontBlue">Please check it over.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                    </td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your name: </span><span id="getName" class="fontBold">joe</span></td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your location: </span><span id="getLocation" class="fontBold">joeHome</span></td>
+                </tr>
+                <tr class="ffVerdana">
+                    <td class="fontBlack25"><span class="fontBolder">Your email: </span><span id="getEmail" class="fontBold">joe@mail</span></td>
+                </tr>
+                <tr class="ffTimeNewRoman fontBlack">
+                    <td>
+                        <br />
+                        <img onclick="navigate('Review', 'Contact')" class="img72 pointer" src="images/left48x48.png" />&nbsp;
+                        <img class="img72" src="images/abort48x48.png" />&nbsp;
+                        <img class="img72" src="images/checkmark.png" />
+                    </td>
+                </tr>
+            </table><div class="emptyDiv">
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="hide0">0 only right<img src="images/left48x48.png" /><img onclick="navigate('hide0','hide1')" src="images/right48x48.png" /></div>
+        <div id="hide1">1 left and right<img onclick="navigate('hide1','hide0')" src="images/left48x48.png" /><img onclick="navigate('hide1','hide2')" src="images/right48x48.png" /></div>
+        <div id="hide2">2 left and right<img onclick="navigate('hide2','hide1')" src="images/left48x48.png" /><img onclick="navigate('hide2','hide3')" src="images/right48x48.png" /></div>
+        <div id="hide3">3 left and right<img onclick="navigate('hide3','hide2')" src="images/left48x48.png" /><img onclick="navigate('hide3','hide4')" src="images/right48x48.png" /></div>
+        <div id="hide4">4 left no right<img onclick="navigate('hide4','hide3')" src="images/left48x48.png" /><img src="images/right48x48.png" /></div>
+    </div>
+
+    <script>
+        function onload() {
+            $("#Initial").show();
+            $("#About").hide();
+            $("#Address").hide();
+            $("#Contact").hide();
+            $("#Review").hide();
+        }
+        function navigate(prev, next) {
+            var sPrev = '#' + prev;
+            var sNext = '#' + next;
+            console.log(sPrev);
+            console.log(sNext);
+
+            $(sPrev).hide();
+            $(sNext).show();
+        }
+    </script>
+</body>
+</html>

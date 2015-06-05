@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Question 4 Html</title>
+    <style>
+
+        body {
+            font-size: 14px;
+            font-family: arial,sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <form action="send.php" method="post">
+        
+        <input type="hidden" name="session_token" value="" />
+        <input type="radio" name="decision" value="yes" />Yes
+        <br>
+        <input type="radio" name="decision" value="no" />No
+        <textarea name="comments"></textarea>
+        <input type="submit" alt="submit" >submit
+    </form>
+</body>
+</html>

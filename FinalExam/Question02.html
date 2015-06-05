@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Question 2 Html</title>
+
+    <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            color: lightblue;
+        }
+
+        .yellow {
+            color: rgb(77, 77, 77);
+            background-color: lightgray;
+        }
+
+        .blue {
+            color: lightblue;
+        }
+    </style>
+
+    <script>
+        var list = ["Frank", "Mike", "Peter"];
+        $(document).ready(function () {
+            console.log("ready!");
+
+            $("button").on("click", function (event) {
+
+                $("#list").empty();
+                for (var i = 0; i < list.length; i++) {
+                    $("#list").append("<li>" + list[i] + "</li>");
+                }
+                $("#button").removeClass('blue').addClass("yellow");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="button" class="blue">
+        Creat List Now
+    </button>
+    <div><ul id="list"></ul></div>
+</body>
+
+</html>
